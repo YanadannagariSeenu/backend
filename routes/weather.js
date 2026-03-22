@@ -1,10 +1,11 @@
+
 const express = require("express");
 const axios = require("axios");
 const Weather = require("../models/Weather");
 
 const router = express.Router();
 
-const API_KEY = "bf512853d67c37be99c047e62593427d";
+const API_KEY = process.env.API_KEY;
 
 router.get("/:city", async (req, res) => {
 
